@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-  {% for book in book_list %}
+    <h1>Список книг</h1>
+    {% for book in book_list %}
     <a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a>
-  {% endfor %}
+    {% endfor %}
 </body>
 </html>
