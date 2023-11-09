@@ -31,4 +31,5 @@ urlpatterns = [
     path('create_book/', BookCreateView.as_view(), name='create_book'),
     path('register/', UserCreateView.as_view(), name='register'),
     path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ]
