@@ -1,0 +1,58 @@
+<header>
+<!--    <div class="container">-->
+<!--        <div class="navbar d-flex justify-content-between">-->
+<!--&lt;!&ndash;            <div class="col-1">&ndash;&gt;-->
+<!--&lt;!&ndash;                <img class="w-100 h-100" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="">&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--            <div class="col-6">-->
+<!--            <ul class="nav justify-content-center">-->
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>-->
+<!--              </li>-->
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'book_list' %}">Book</a>-->
+<!--              </li>-->
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link" href="{% url 'article_list' %}">Article</a>-->
+<!--              </li>-->
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link disabled" aria-disabled="true">Disabled</a>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="col-4">-->
+<!--            &lt;!&ndash;ffff&ndash;&gt;-->
+<!--        </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'article_list' %}">Article</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'book_list' %}">Book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Profile</a>
+        </li>
+          <li class="nav-item">
+           <a class="nav-link active" href="#">Login</a>
+          </li>
+
+      </ul>
+
+      <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</header>
