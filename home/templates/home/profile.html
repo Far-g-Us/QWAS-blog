@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Профиль пользователя</h1>
+    <p>Добро пожаловать {{ user.username }}</p>
+    <p>Имя {{ user.full_name }}</p>
+    <p>Дата рождения: {{ user.birth_date }}</p>
+    <a type="button" class="btn btn-dark" href="{% url 'logout' %}"> Выход </a>
+
+{% endblock content %}

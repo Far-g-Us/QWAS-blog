@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 <h1>Добавление новой книги</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }} <!--{{ form.as_div }}-->
         <button type="submit">Добавить книгу</button>
     </form>
-</body>
-</html>
+{% endblock content %}
