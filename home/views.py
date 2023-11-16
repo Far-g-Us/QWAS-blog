@@ -69,7 +69,7 @@ class UserCreateView(CreateView):
         return super().form_valid(form)
 
 class ProfileView(LoginRequiredMixin ,TemplateView):
-    template_name = 'classviewshome/profile.html'
+    template_name = 'home/profile.html'
 
     # @method_decorator(login_required)
     # def dispatch(self, *args, **kwargs):

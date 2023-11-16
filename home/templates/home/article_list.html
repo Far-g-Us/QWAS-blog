@@ -1,16 +1,4 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Article list</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<h1>Список статей</h1>-->
-<!--  {% for article in article_list %}-->
-<!--    <a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a>-->
-<!--  {% endfor %}-->
-<!--</body>-->
-<!--</html>-->
+
 {% extends "base.html" %}
 {% block content %}
   <div class="container">
@@ -19,17 +7,17 @@
             {% for article in article_list %}
                 <div class="col-12 col-md-6 col-lg-4 mb-2 mb-md-3">
                     <div class="card p-2" >
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="https://plugins.jetbrains.com/files/18232/370564/icon/pluginIcon.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.text }}</p>
+                            <a href="{% url 'article_detail' article.id %}" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
-        <div class="row col-12 col-xl-1 ">sidebar</div>
+<!--        <div class="row col-12 col-xl-1 ">sidebar</div>-->
     </div>
 </div>
 {% endblock content %}

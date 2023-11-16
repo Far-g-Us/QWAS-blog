@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
- <section class="hero vh-100">
+<section class="hero vh-100">
     <div class="container d-flex align-items-center h-75">
         <div class="col-12 col-md-8 col-lg-5 ps-0 ps-md-2 ps-lg-4">
             <h1 class="mb-2">The companion app for your book shelf</h1>
@@ -8,5 +8,52 @@
             <p>Already a member? <a href="{% url 'login' %}">Sign in.</a></p>
         </div>
     </div>
- </section>
+</section>
+<section class="hero vh-100">
+    <div class="container d-flex align-items-center h-75">
+        <div class="col-12">
+            <h1 class="d-flex justify-content-center">Meet the team</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae ea enim explicabo facilis impedit ipsa laboriosam libero mollitia nesciunt nihil, nisi possimus provident quam quasi, qui quis reprehenderit rerum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur cum cupiditate facere hic ipsam quaerat reiciendis rem similique voluptate? Assumenda atque blanditiis distinctio eveniet nostrum perspiciatis soluta veniam veritatis.</p>
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4 col-lg-3 ps-0">
+                <div class="card border border-white">
+                  <div class="card-body">
+                    <img src="https://logos-download.com/wp-content/uploads/2016/09/Sass_logo.png" class="card-img-top" alt="...">
+                    <h5 class="card-title">Yavor Punchev & Fuji</h5>
+                    <p class="card-text">Sofia, Bulgaria</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-3 ps-0">
+                <div class="card border border-white">
+                  <div class="card-body">
+                    <img src="https://logos-download.com/wp-content/uploads/2016/09/Sass_logo.png" class="card-img-top" alt="...">
+                    <h5 class="card-title">Joe Alcorn</h5>
+                    <p class="card-text">London, United Kingdom</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-3 ps-0">
+                <div class="card border border-white">
+                  <div class="card-body">
+                    <img src="https://logos-download.com/wp-content/uploads/2016/09/Sass_logo.png" class="card-img-top" alt="...">
+                    <h5 class="card-title">Aziz Firat</h5>
+                    <p class="card-text">Oslo, Norway</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero vh-100">
+    <div class="container d-flex align-items-center h-75">
+        <div class="col-12">
+            <h1 class="d-flex justify-content-center">Ready to join us?</h1>
+            <h5 class="d-flex justify-content-center">Oku is the companion app for your bookshelf.</h5>
+            <p class="d-flex justify-content-center">Become a member for free to track, rate & review your favorite books with a community of others.</p>
+            <span class="d-flex justify-content-center align-items-center"><a href="{% url 'register' %}" class="col-3 btn btn-dark mb-2">Create a free account</a></span>
+        </div>
+    </div>
+</section>
 {% endblock content %}

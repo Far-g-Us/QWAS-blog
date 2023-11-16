@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Список книг</h1>
-    {% for book in book_list %}
-    <a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a>
-    {% endfor %}
+  <div class="container">
+    <div class="row">
+        <div class="row col-12 col-xl-11 p-2">
+            {% for book in book_list %}
+                <div class="col-12 col-md-6 col-lg-4 mb-2 mb-md-3">
+                    <div class="card p-2" >
+                        <img src="https://plugins.jetbrains.com/files/18232/370564/icon/pluginIcon.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">{{ book.text }}</p>
+                            <a href="{% url 'book_detail' book.id %}" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+  </div>
 {% endblock content %}
