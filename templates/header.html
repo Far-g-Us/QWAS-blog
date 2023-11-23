@@ -1,14 +1,14 @@
-<header class="mb-5 py-3 border-bottom border-dark-subtle">
-      <div class="container">
-        <div class="row d-flex justify-content-between align-item-center">
+<header class="mb-5 py-3 border-bottom border-dark">
+    <div class="container">
+        <div class="row d-flex justify-content-between align-items-center">
             <div class="col-4 d-flex">
-                <a href="{% url 'home' %}" class="col-2">
-                <img class="w-100 h-100" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="">
-                </a>
+              <a href="{% url 'home' %}" class="col-1 ">
+                <img class="w-100" src="https://media.baamboozle.com/uploads/images/318635/1623782709_176610_import-url.png" alt="">
+              </a>
             </div>
-            <div class="col-4">
+            <div class="col-4 d-none d-lg-block">
                 <ul class="nav w-100 fs-6 d-flex justify-content-center">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <a class="nav-link text-dark" aria-current="page" href="{% url 'home' %}">Главная</a>
                     </li>
                     <li class="nav-item">
@@ -19,7 +19,7 @@
                     </li>
                   </ul>
             </div>
-            <div class="col-4 d-flex justify-content-end">
+            <div class="col-4 d-none d-lg-flex justify-content-end">
               {% if user.is_authenticated == False %}
                 <a href="{% url 'register' %}" type="button" class="h-75  btn btn-light ms-2">Регистрация</a>
                 <a href="{% url 'login' %}" type="button" class="h-75  btn btn-dark ms-2">Вход</a>
@@ -32,6 +32,30 @@
                 <a href="{% url 'logout' %}" type="button" class="h-75  btn btn-dark ms-2">Выход</a>
               {% endif %}
             </div>
+            <nav class="navbar d-block d-lg-none bg-light fixed-top">
+
+              <div class="container-fluid d-flex justify-content-between">
+                <div class="col-4 d-flex">
+                  <a href="{% url 'home' %}" class="col-2 ">
+                    <img class="w-100" src="https://media.baamboozle.com/uploads/images/318635/1623782709_176610_import-url.png" alt="">
+                  </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
+                        <a class="nav-link" href="{% url 'article_list' %}">Статьи</a>
+                        <a class="nav-link" href="{% url 'book_list' %}">Книги</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
         </div>
     </div>
 </header>
