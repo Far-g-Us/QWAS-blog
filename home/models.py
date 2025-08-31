@@ -9,8 +9,8 @@ class CustomUser(AbstractUser):
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=100, verbose_name='Заголовок')
-    text = models.TextField(max_length=15, verbose_name='Текст')
+    title = models.CharField(max_length=25, verbose_name='Заголовок')
+    text = models.TextField(max_length=150, verbose_name='Текст')
 
     def __str__(self):
         return f'{self.title}, {self.text}'
